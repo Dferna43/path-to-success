@@ -15,7 +15,7 @@ H4
 1.15em
 Colors
 Teal :#4CA7C0
-Purple: 
+Purple: #484FB7
 Lavender: #6B8FE7
 Yellow: #E9BB57; 
 Pink:#D9526F;
@@ -38,16 +38,99 @@ body {
 }
 
 h1 {
+    font-family: 'Kavoon', serif;
     font-size: 3em;
 }
 
 header {
     text-align: center;
+    background-color: #6B8FE7;
+    border-radius: 0 0 25px 25px;
+    padding-bottom: 25px;
+    z-index: 1;
 }
-/* --------------------GLOBAL STYLES (mobile first/small) --------------------*/
+
+.sub-header {
+    background-color: #D9526F;
+    color: #ffffff;
+    font-family: 'Kavoon', serif;
+    font-weight: 100;
+    padding-top: 40px;
+    text-align: center;
+    border-radius: 0 0 25px 25px;
+    position: relative;
+    margin-top: -25px;
+    width: 98%;
+    margin-left: 8px;
+    z-index: -1;
+}
+
+.menu-toggle {
+    display: none;
+}
+
+.menu-button {
+    display: none;
+    cursor: pointer;
+    font-size: 1.5em;
+    position: fixed;
+    top: 0px;
+    right: 0;
+    padding: 0.5rem 1rem;
+    background-color: #E9BB57;
+    border-radius: 4px;
+    width: 25%;
+}
+
+/* --------------------GLOBAL STYLES (mobile first/small 450px) --------------------*/
 @media screen and (min-width: 450px) {
+    .menu-button {
+        display: block;
+    }
+
+    h1 {
+        color: #ffffff;
+        padding-top: 25px;
+    }
+
+    .hide {
+        display: none;
+    }
+
+    nav ul {
+        display: none;
+        flex-direction: column;
+        background-color: #E9BB57;
+        position: fixed;
+        top: 35px;
+        right: 0;
+        padding-left: 0;
+        border-radius: 4px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    .menu-button {
+        font-size: 1em;
+        font-weight: bold;
+        padding: .5em;
+    }
+
+    .menu-toggle:checked ~ nav ul {
+        display: flex;
+    }
+}
+
+/*-------------------- MEDIA QUERY (medium 620px) --------------------------------*/
+@media screen and (min-width: 620px) {
 
 }
-/*-------------------- MEDIA QUERY (medium) --------------------------------*/
-/*-------------------- MEDIA QUERY (large) ------------------------------------*/
-/*-------------------- MEDIA QUERY (xl) ---------------------------------------*/
+
+/*-------------------- MEDIA QUERY (large 950px) ------------------------------------*/
+@media screen and (min-width: 950px) {
+
+}
+
+/*-------------------- MEDIA QUERY (xl 1280px) ---------------------------------------*/
+@media screen and (min-width: 1280px) {
+
+}
