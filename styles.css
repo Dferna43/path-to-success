@@ -385,6 +385,15 @@ ul {
         gap: 1rem;
     }
     
+    .pricing-container {
+        display: grid;
+        grid-template-columns: repeat(1, 3fr);
+        grid-template-rows: repeat(1, 3fr);
+        box-sizing: content-box;
+        
+    }
+
+    
 }
 
 /*-------------------- MEDIA QUERY (large 950px) ------------------------------------*/
