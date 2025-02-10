@@ -96,7 +96,6 @@ ul {
 .menu-button {
     display: none;
     cursor: pointer;
-    /* font-size: 2rem; */
     position: fixed;
     top: 0px;
     right: 0;
@@ -296,18 +295,101 @@ ul {
     .menu-toggle:checked ~ nav ul {
         display: flex;
     }
+
+    .why-container {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        padding: 1rem;
+        background-color: #D9526F;
+    }
+    
+    .why-aside {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        gap: 1rem;
+    }
+
+    .why-aside div {
+    padding: 50px 25px;
+    text-align: center;
+    border-radius: 15px;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    }
 }
 
 /*-------------------- MEDIA QUERY (medium 620px) --------------------------------*/
 @media screen and (min-width: 620px) {
-    .service-item {
-        background-color: #1E1E1E;
+    .our-services h3 {
+        margin-left: 30px;
     }
+
+    .service-item {
+        margin-bottom: 10px;
+        padding: 10px;
+    }
+
+    .one-on-one-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto auto auto;
+    }
+
+    .one-on-one-container > div:nth-child(1) {
+        display: grid;
+        grid-column: span 2;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .one-on-one-container > div:nth-child(1) .service-item:nth-child(2), .one-on-one-container > div:nth-child(1) .service-item:nth-child(3) {
+        display: grid;
+        grid-column: span 1;
+    }
+
+    .one-on-one-container > div:nth-child(1) .service-item:nth-child(3), .one-on-one-container > div:nth-child(1) .service-item:nth-child(4) {
+        display: grid;
+        grid-column: span 2;
+        width: 88%;
+    }
+
+    .one-on-one-container > div:nth-child(3) {
+        display: grid;
+        grid-column: span 2;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .one-on-one-container > div:nth-child(4) {
+        display: grid;
+        grid-column: span 2;
+        width: 100%;
+        margin: 0;
+        box-sizing: content-box;
+    }
+
+    .one-on-one-container > div:nth-child(5) {
+        display: grid;
+        grid-column: span 2;
+        width: 100%;
+        margin: 0;
+        box-sizing: content-box;
+    }
+
+    .why-aside {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        gap: 1rem;
+    }
+    
 }
 
 /*-------------------- MEDIA QUERY (large 950px) ------------------------------------*/
 @media screen and (min-width: 950px) {
-
+    background-color: #1E1E1E;
 }
 
 /*-------------------- MEDIA QUERY (xl 1280px) ---------------------------------------*/
