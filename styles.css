@@ -26,15 +26,25 @@ White:#ffffff; */
 /* -------------------- IMPORTED FONTS -------------------------------------- */
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Kavoon&display=swap');
 /*-------------------- CSS REST ---------------------------------------------------*/
-* {
+html {
     box-sizing: border-box;
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+} 
+
+* {
     padding: 0;
     margin: 0;
 }
+
 /* -------------------- ROOT VARIABLES --------------------------------------- */
 body {
     font-family: 'Inter', serif;
     background-color: #484FB7;
+    margin: 0;
+    padding: 0;
 }
 
 h1 {
@@ -117,7 +127,7 @@ ul {
     flex-wrap: wrap;
     grid-template-columns: repeat(3, 1fr);
     margin-top: 0;
-    margin-left: 5%;
+    /* margin-left: 5%; */
 }
 
 .service-item {
@@ -337,6 +347,7 @@ ul {
         display: grid;
         grid-template-columns: 1fr 1fr;
         grid-template-rows: auto auto auto;
+        width: 90%;
     }
 
     .one-on-one-container > div:nth-child(1) {
@@ -366,8 +377,6 @@ ul {
         display: grid;
         grid-column: span 2;
         width: 100%;
-        margin: 0;
-        box-sizing: content-box;
     }
 
     .one-on-one-container > div:nth-child(5) {
