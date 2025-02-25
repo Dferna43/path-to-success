@@ -132,7 +132,7 @@ ul {
 }
 
 .one-on-one-container {
-    display: flexbox;
+    display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     grid-template-columns: repeat(3, 1fr);
@@ -470,7 +470,7 @@ ul {
     }
 
     .pricing-grid {
-        display: flexbox;
+        display: flex;
         grid-template-columns: repeat(4, 1fr);
         gap: 20px;
     }
