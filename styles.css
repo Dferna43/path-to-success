@@ -68,6 +68,16 @@ header {
     z-index: 1;
 }
 
+nav {
+    background-color: #E9BB57;
+    position: sticky;
+    top: 0;
+    z-index: 2;
+    width: 100%;
+    border-radius: 10px;
+    text-align: center;
+}
+
 ul {
     list-style-type: none;
     text-align: left;
@@ -132,6 +142,15 @@ ul {
     color: #484FB7;
 }
 
+.service-item-container {
+    background-color: #ffffff;
+    border-radius: 15px;
+    width: 78%;
+    padding: 25px;
+    margin-left: 10px;
+    margin-bottom: 25px;
+}
+
 .why-container {
     display: flex;
     flex-direction: column;
@@ -190,13 +209,6 @@ ul {
     margin-bottom: 10px;
 }
 
-.pricing-container > div {
-    display: flex;
-    flex-direction: column;
-    gap: 2rem;
-    align-items: center;
-}
-
 .pricing-container table {
     width: 60%;
     margin-left: 17%;
@@ -231,6 +243,10 @@ ul {
     border-radius: 10px;
     box-shadow: 4px 4px 10px 2px rgba(0, 0, 0, 0.2);
     width: 99%;
+}
+
+.first-step p {
+    color: #ffffff;
 }
 
 .footer-container {
@@ -378,30 +394,89 @@ ul {
         box-sizing: content-box;
     }
 
-    .why-aside {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        grid-template-rows: repeat(2, 1fr);
-        gap: 1rem;
-    }
-    
-    .pricing-container {
-        display: grid;
-        grid-template-columns: repeat(1, 3fr);
-        grid-template-rows: repeat(1, 3fr);
-        box-sizing: content-box;
-        
+    .service-item-container {
+        display: flex;
+        background-color: #ffffff;
+        border-radius: 15px;
+        width: 87%;
+        margin-left: 25px;
+        margin-bottom: 25px;
+        margin-top: 20px;
+        padding: 10px;
     }
 
     
+    .why-aside {
+        display: inline-flex;
+        gap: 1rem;
+    }
+
+    .first-step {
+        display: inline-block;
+    }
+
+    .pricing-container {
+        width: 100%;
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 20px;
+    }
+
+    .pricing-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 10px;
+    }
+
+    .first-step {
+        display: flex;
+    }
+
+    .button button {
+        width: 200px;
+        padding: 10px 20px;
+        margin-top: 75px;
+        transition: background-color 0.3s ease;
+    }
+
+    .button button:hover {
+        background-color: #4CA7C0;
+    }
 }
 
 /*-------------------- MEDIA QUERY (large 950px) ------------------------------------*/
 @media screen and (min-width: 950px) {
-    background-color: #1E1E1E;
+
+    .pricing-container {
+        width: 100%;
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 20px;
+    }
+
+    .pricing-grid {
+        display: flexbox;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 20px;
+    }
+
+    .why-container {
+        display: flex;
+        flex-direction: row;
+        gap: 1rem;
+        padding: 1rem;
+        background-color: #D9526F;
+    }
+
 }
 
 /*-------------------- MEDIA QUERY (xl 1280px) ---------------------------------------*/
 @media screen and (min-width: 1280px) {
-
+  
 }
